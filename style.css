@@ -1,6 +1,5 @@
-.mainTitle {
-    font-size: 1.5em;
+h1.mainTitle {
+    font-family: "Consolas";
     font-weight: bold;
     color: #000;
-    margin-bottom: 0.5em;
 }

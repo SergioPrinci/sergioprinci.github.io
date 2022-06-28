@@ -1,11 +1,15 @@
+@keyframes cursor-blink 
+{
+    0% 
+    {
+      opacity: 0;
+    }
+}
+
 body
 {
     background-color: black;
-}
-
-h1.mainTitle 
-{
+    font-size: 24px;
     font-family: "Consolas";
-    font-weight: bold;
-    color: greenyellow;
+    color: green;
 }

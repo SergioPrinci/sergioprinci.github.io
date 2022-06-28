@@ -5,6 +5,24 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1 class="mainTitle">Welcome!</h1>
+        <script>
+            //thanks to https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep for the code below
+            const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+            async function charByChar(text)
+            {
+                for (i = 0; i < text.length; i++)
+                {
+                    document.body.innerHTML += text.charAt(i);
+                    await sleep(20);
+                }
+                document.body.innerHTML += "<br>";
+                await sleep(1000);
+            }
+            
+            charByChar("Booting up...");
+            charByChar("Found myself in: Istituto Tecnico Fossati-Da Passano, La Spezia, Italy");
+            charByChar("Website owned by: Sergio Princivalle, 5Q");
+        </script>
     </body>
 </html>

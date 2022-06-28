@@ -1,3 +1,8 @@
+body
+{
+    background-color: navy;
+}
+
 h1.mainTitle {
     font-family: "Consolas";
     font-weight: bold;

@@ -43,7 +43,7 @@ body
     background: radial-gradient(black 1px, green 5px) 0   0   /3px 3px;
     background-color: black;
     font-size: 2vh;
-    font-family: "Consolas";
+    font-family: "Consolas", "Liberation Mono";
     color: green;
     animation: boot 2s ease-in normal;
 }

@@ -50,7 +50,7 @@ async function main(stringList)
     terminal.innerHTML = "";
 
     stringList = [
-                " Booting up...",
+                " Avvio...",
                 "Benvenuti in PCTO Versione 2.3b.",
                 "Tramite questo sito vi verr\xE1 descritta la mia esperienza di PCTO in questi tre anni.",
                 "Prego, sciegliere l'anno di cui si vuole parlare."];
@@ -89,10 +89,12 @@ async function loadThirdYear()
     terminal.innerHTML = "";
 
     stringList = [
-                " Loading page...",
-                "While you wait, I'll talk about what happened in your third year.",
-                "On the third year of your studies, the possibilities of PCTO experiences just opened.",
-                "I still remember how much you were excited about going to learn how to work..."];
+                " Carico pagina...",
+                "Mentre aspettate, vi daró il contesto nel quale mi sono trovato nel terzo anno.",
+                "Con l'inizio del terzo anno di scuola, si sono anche aperte le possibilitá di effettuare esperienze di PCTO.",
+                "Ero molto felice di ció, e aspettavo soltanto un'opportunitá per affrontare una situazione di lavoro.",
+                "Purtroppo, ció non é stato possibile, causa ció che ha messo in crisi tutto il mondo nel giro di pochi mesi:",
+                "il coronavirus."];
 
     for (var i = 0; i < stringList.length; i++)
     {
@@ -106,7 +108,7 @@ async function loadThirdYear()
         await sleep(700);
     }
 
-    await sleep(2000);
+    await sleep(5000);
 
     window.location.href = "thirdYear.html";
 }

@@ -2,14 +2,12 @@
 {
     from
     {
-        background-color: grey;
         height: 0%;
         opacity: 0%;
     }
 
     to
     {
-        background-color: black;
         height: 100%;
         opacity: 100%;
     }
@@ -60,6 +58,7 @@ div
 
 button
 {
+    animation: boot 0.5s ease-in normal;
     background-color: black;
     color: green;
     font-size: 2vh;

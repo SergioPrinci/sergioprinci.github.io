@@ -6,6 +6,8 @@ var stringList;
 
 async function main(stringList)
 {
+    await sleep(2000);
+
     //startup screen
     terminal.innerHTML = "";
 
@@ -50,7 +52,7 @@ async function main(stringList)
     stringList = [
                 " Booting up...",
                 "Benvenuti in PCTO Versione 2.3b.",
-                "Tramite questo sito vi verrá descritta la mia esperienza di PCTO in questi tre anni.",
+                "Tramite questo sito vi verr\xE1 descritta la mia esperienza di PCTO in questi tre anni.",
                 "Prego, sciegliere l'anno di cui si vuole parlare."];
 
     for (var i = 0; i < stringList.length; i++)
@@ -71,9 +73,9 @@ async function main(stringList)
     var button2 = document.createElement("button");
     var button3 = document.createElement("button");
 
-    button1.innerHTML = "Third year";
-    button2.innerHTML = "Fourth year";
-    button3.innerHTML = "Fifth year";
+    button1.innerHTML = "Terzo anno";
+    button2.innerHTML = "Quarto anno";
+    button3.innerHTML = "Quinto anno";
 
     button1.onclick = loadThirdYear;
     

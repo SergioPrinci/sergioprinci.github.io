@@ -14,7 +14,7 @@
 body
 {
     background-color: black;
-    font-size: 24px;
+    font-size: 2vh;
     font-family: "Consolas";
     color: green;
     animation: opacity-up 2s linear normal;
@@ -32,7 +32,7 @@ button
 {
     background-color: black;
     color: green;
-    font-size: 24px;
+    font-size: 2vh;
     font-family: "Consolas";
     border: solid 1px green;
     margin: 10px;

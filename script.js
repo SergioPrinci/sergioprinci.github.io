@@ -16,6 +16,7 @@ async function main(stringList)
                     "Sorry, sorry, I'll try to focus.",
                     "My job is to talk about your PCTO experiences.",
                     "Now, Sergio, what do you want me to talk about?"];
+
     for (var i = 0; i < stringList.length; i++)
     {
         var string = stringList[i];
@@ -32,19 +33,19 @@ async function main(stringList)
     var button1 = document.createElement("button");
     var button2 = document.createElement("button");
     var button3 = document.createElement("button");
-    
-    buttonDiv.appendChild(button1);
-    buttonDiv.appendChild(button2);
-    buttonDiv.appendChild(button3);
 
     button1.innerHTML = "Third year";
     button2.innerHTML = "Fourth year";
     button3.innerHTML = "Fifth year";
 
-    button1.onclick = loadThirdYear()
+    button1.onclick = loadThirdYear();
+    
+    buttonDiv.appendChild(button1);
+    buttonDiv.appendChild(button2);
+    buttonDiv.appendChild(button3);
 }
 
-function loadThirdYear()
+async function loadThirdYear()
 {
     stringList = [" Loading page...",
                 "While you wait, I'll talk about what happened in your third year.",

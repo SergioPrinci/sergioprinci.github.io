@@ -1,23 +1,53 @@
-@keyframes opacity-up
+@keyframes boot
 {
-    0% 
+    from
     {
+        background-color: grey;
+        height: 0%;
         opacity: 0%;
     }
 
-    100%
+    to
     {
-        opacity: 100%
+        background-color: black;
+        height: 100%;
+        opacity: 100%;
     }
 }
 
+/* https://codemyui.com/fallout-pip-boy-screen-in-css-and-html/ */
+@keyframes wave 
+{
+    0% 
+    {
+      box-shadow:0 -10vh 20vh #0c0;
+      top:-100vh;
+    }
+    48%, 52% 
+    {
+      box-shadow:0 -10vh 20vh #090;
+    }
+    50% 
+    {
+      box-shadow:0 -10vh 20vh #060;
+    }
+    100% 
+    {
+      box-shadow:0 -10vh 20vh #0c0;
+      top:200vh;
+    }
+}
+
+/* https://stackoverflow.com/questions/61431316/how-to-get-scanlines-over-background-image-in-css */
+
 body
 {
+    background: radial-gradient(black 1px, green 5px) 0   0   /3px 3px;
     background-color: black;
     font-size: 2vh;
     font-family: "Consolas";
     color: green;
-    animation: opacity-up 2s linear normal;
+    animation: boot 2s ease-in normal;
 }
 
 div

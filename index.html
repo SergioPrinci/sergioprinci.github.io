@@ -7,39 +7,19 @@
     <body>
         <div id="screen">
             <div id="titleScreen">
-                <p>Sergio's website</p>
+                Sergio's website
             </div> <!-- end titleScreen -->
             <div id="terminalSection">
-                <script>
-                    var terminal = document.getElementById("terminalSection");
-                    
-                    function printCharByChar(text)
-                    {
-                        var i = 0;
-                        terminal.innerHTML += "<p>";
-                        var timer = setInterval(function()
-                        {
-                            if(i < text.length)
-                            {
-                                terminal.innerHTML += text[i];
-                                i++;
-                            }
-                            else
-                            {
-                                clearInterval(timer);
-                            }
-                        }, 50);
-                        terminal.innerHTML += "</p>";
-                    }
 
-                    printCharByChar("Welcome to Sergio's website!\n");
-                </script>
             </div> <!-- end of terminalSection -->
-            <div id="footer">
-                <footer>
-                    <p>&copy; Sergio Princivalle</p>
-                </footer>
-            </div> <!-- end of footer -->
+            <div id="buttons">
+
+            </div> <!-- end of buttons -->
+            <footer>
+                <p>&copy; Sergio Princivalle</p>
+            </footer>
         </div> <!-- end of screen -->
+        <!--copilot ti voglio bene-->
     </body>
+    <script src="script.js"></script>
 </html>

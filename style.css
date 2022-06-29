@@ -1,8 +1,13 @@
-@keyframes cursor-blink 
+@keyframes opacity-up
 {
     0% 
     {
-      opacity: 0;
+        opacity: 0%;
+    }
+
+    100%
+    {
+        opacity: 100%
     }
 }
 
@@ -12,4 +17,22 @@ body
     font-size: 24px;
     font-family: "Consolas";
     color: green;
+    animation: opacity-up 2s linear normal;
+}
+
+div, footer
+{
+    margin: 10px;
+    border: solid 1px green;
+}
+
+p
+{
+    margin: 10px;
+}
+
+footer
+{
+    position: fixed;
+    bottom: 10;
 }

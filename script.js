@@ -38,7 +38,7 @@ async function main(stringList)
     button2.innerHTML = "Fourth year";
     button3.innerHTML = "Fifth year";
 
-    button1.onclick = loadThirdYear();
+    button1.onclick = loadThirdYear;
     
     buttonDiv.appendChild(button1);
     buttonDiv.appendChild(button2);

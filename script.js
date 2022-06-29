@@ -86,6 +86,13 @@ async function main(stringList)
 
 async function loadThirdYear()
 {
+    var buttons = document.getElementsByTagName("button");
+
+    for (var i = 0; i < buttons.length; i++)
+    {
+        buttons[i].remove();
+    }
+
     terminal.innerHTML = "";
 
     stringList = [

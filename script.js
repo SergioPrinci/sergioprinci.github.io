@@ -93,7 +93,7 @@ async function loadThirdYear()
                 "Mentre aspettate, vi dar\xF3 il contesto nel quale mi sono trovato nel terzo anno.",
                 "Con l'inizio del terzo anno di scuola, si sono anche aperte le possibilit\xE1 di effettuare esperienze di PCTO.",
                 "Ero molto felice di ci\xF3, e aspettavo soltanto un'opportunit\xE1 per affrontare una situazione di lavoro.",
-                "Purtroppo, ci\xF3 non \xE9 stato possibile, causa ci\xF3 che ha messo in crisi tutto il mondo nel giro di pochi mesi:",
+                "Purtroppo, ci\xF3 non \xE9 stato possibile, a causa di ci\xF3 che ha messo in crisi l'intero mondo nel giro di pochi mesi:",
                 "il coronavirus."];
 
     for (var i = 0; i < stringList.length; i++)

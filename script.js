@@ -90,10 +90,10 @@ async function loadThirdYear()
 
     stringList = [
                 " Carico pagina...",
-                "Mentre aspettate, vi daró il contesto nel quale mi sono trovato nel terzo anno.",
-                "Con l'inizio del terzo anno di scuola, si sono anche aperte le possibilitá di effettuare esperienze di PCTO.",
-                "Ero molto felice di ció, e aspettavo soltanto un'opportunitá per affrontare una situazione di lavoro.",
-                "Purtroppo, ció non é stato possibile, causa ció che ha messo in crisi tutto il mondo nel giro di pochi mesi:",
+                "Mentre aspettate, vi dar\xF3 il contesto nel quale mi sono trovato nel terzo anno.",
+                "Con l'inizio del terzo anno di scuola, si sono anche aperte le possibilit\xE1 di effettuare esperienze di PCTO.",
+                "Ero molto felice di ci\xF3, e aspettavo soltanto un'opportunit\xE1 per affrontare una situazione di lavoro.",
+                "Purtroppo, ci\xF3 non \xE9 stato possibile, causa ci\xF3 che ha messo in crisi tutto il mondo nel giro di pochi mesi:",
                 "il coronavirus."];
 
     for (var i = 0; i < stringList.length; i++)

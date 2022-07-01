@@ -100,9 +100,9 @@ async function loadThirdYear()
 
     stringList = [
                 " Carico pagina...",
-                "Mentre aspettate, vi dar\xF3 il contesto nel quale mi sono trovato nel terzo anno.",
-                "Con l'inizio del terzo anno di scuola, si sono anche aperte le possibilit\xE1 di effettuare esperienze di PCTO.",
-                "Ero molto felice di ci\xF3, e aspettavo soltanto un'opportunit\xE1 per affrontare una situazione di lavoro.",
+                "Mentre aspettate, vi descriver\xF3 il contesto nel quale mi sono trovato all'interno del terzo anno scolastico.",
+                "Con l'inizio di esso, si sono aperte le possibilit\xE1 di effettuare esperienze di PCTO.",
+                "Ero molto desideroso di imparare cose nuove, e aspettavo da tempo l'opportunit\xE1 di affrontare una situazione di lavoro.",
                 "Purtroppo, ci\xF3 non \xE9 stato possibile, a causa di ci\xF3 che ha messo in crisi l'intero mondo nel giro di pochi mesi:",
                 "il coronavirus."
             ];
@@ -172,11 +172,11 @@ async function loadFifthYear()
 
     stringList = [
                 " Carico pagina...",
-                "Mentre aspettate, vi dar\xF3 il contesto nel quale mi sono trovato nel terzo anno.",
-                "Con l'inizio del terzo anno di scuola, si sono anche aperte le possibilit\xE1 di effettuare esperienze di PCTO.",
-                "Ero molto felice di ci\xF3, e aspettavo soltanto un'opportunit\xE1 per affrontare una situazione di lavoro.",
-                "Purtroppo, ci\xF3 non \xE9 stato possibile, a causa di ci\xF3 che ha messo in crisi l'intero mondo nel giro di pochi mesi:",
-                "il coronavirus."];
+                "Quinto ed ultimo anno di scuola, ho compreso per bene chi sono e cosa mi piace fare.",
+                "Ció é stato molto utile, perché quest'anno, potendo sfruttare l'orientamento in uscita, ho avuto la possibilitá di scegliere il mio futuro.",
+                "Inoltre, avevo giá raggiunto il monte ore grazie alle molte esperienze che ho avuto negli anni precedenti.",
+                "Tutto ció ha portato a concentrarmi di piú sull'esame e su ció che sarebbe venuto dopo."
+            ];
 
     for (var i = 0; i < stringList.length; i++)
     {

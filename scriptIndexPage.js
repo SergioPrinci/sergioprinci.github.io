@@ -1,5 +1,3 @@
-const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
-
 var terminal = document.getElementById("terminalSection");
 
 var stringList;

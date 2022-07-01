@@ -51,7 +51,7 @@ async function mainPage()
 
     stringList = [
                 " Avvio...",
-                "Benvenuti in PCTO Versione 2.3b.",
+                "Benvenuti in PCTO Versione 2.3b",
                 "Tramite questo sito vi verr\xE1 descritta la mia esperienza di PCTO in questi tre anni.",
                 "Prego, sciegliere l'anno di cui si vuole parlare."
             ];

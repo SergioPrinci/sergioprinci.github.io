@@ -68,6 +68,14 @@ button
     margin: 10px;
 }
 
+button > a
+{
+    color: green;
+    font-size: 2vh;
+    font-family: "Consolas";
+    text-decoration: none;
+}
+
 button:hover
 {
     background-color: green;
@@ -95,7 +103,7 @@ button:hover
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 65%;
+    height: 60%;
 }
 
 footer

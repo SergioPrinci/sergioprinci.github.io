@@ -1,0 +1,127 @@
+@keyframes opacity
+{
+    0% 
+    {
+        opacity: 0;
+    }
+    100% 
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes boot 
+{
+    0% 
+    {
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        left: 0.5%;
+        right: 0.5%;
+    }
+    100% 
+    {
+        top: -50%;
+        bottom: -40%;
+    }
+}
+
+body
+{
+    /* https://stackoverflow.com/questions/61431316/how-to-get-scanlines-over-background-image-in-css */
+    background: radial-gradient(black 1px, green 5px) 0 0 /3px 3px;
+    background-color: black;
+    font-size: 2vh;
+    font-family: "Consolas", "Liberation Mono";
+    color: green;
+    animation: opacity 3s linear normal;
+}
+
+div
+{
+    margin: 10px;
+    padding: 10px;
+    width: auto;
+    border: solid 1px green;
+    overflow: hidden;
+}
+
+button
+{
+    animation: opacity 1s ease-in normal;
+    background-color: black;
+    color: green;
+    font-size: 2vh;
+    font-family: "Consolas";
+    border: solid 1px green;
+    margin: 10px;
+}
+
+img
+{
+    animation: opacity 1s ease-in normal;
+}
+
+button > a
+{
+    color: green;
+    font-size: 2vh;
+    font-family: "Consolas";
+    text-decoration: none;
+}
+
+button:hover
+{
+    background-color: green;
+    color: black;
+}
+
+#screen
+{
+    border: solid 5px green;
+    animation: boot 4s ease-out normal;
+}
+
+#skipButton
+{
+    float: right;
+    height: 4.35vh;
+}
+
+#images
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    float: right;
+    height: 65vh;
+    width: auto;
+}
+
+#buttons
+{
+    padding: 0% 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#terminalSection
+{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+}
+
+footer
+{
+    border: solid 1px green;
+    margin: 10px;
+    padding: 0px 10px;
+}

@@ -37,6 +37,10 @@ async function thirdYearPage()
     image1.src = "images/Sicurezza.png";
     image2.src = "images/LetsApp.png";
 
+    image2.onclick = function() {
+        window.location.href = 'https://news.samsung.com/it/samsung-e-miur-presentano-letsapp-solve-for-tomorrow-edition';
+    };
+
     imagesDiv.appendChild(image1);
     imagesDiv.appendChild(image2);
 
@@ -65,7 +69,7 @@ async function samsLetsApp()
         " La mia idea consiste in una app che viene installata nei telefoni di tutti i netturbini della città.",
         "Il problema delle città piú grandi è l’enorme quantità di rifiuti e la relativa difficoltá di gestione dei cestini pieni.",
         "Con un semplice ESP32, un microcontrollore con Wi-Fi integrato, arriviamo all’applicazione hardware.",
-        "Con questo, tramite un sensore LIDAR, che permette di acquisire la distanza dell'oggetto puntato dai vari laser che lo stesso sensore emette, rilevo quanto il cestino sia pieno, e se viene visto come pieno, il Raspberry manda un segnale tramite wi-fi all’app, informando il netturbino tramite notifica e dandogli il compito di svuotare quel particolare cestino.",
+        "Tramite un sensore LIDAR, che permette di acquisire la distanza dell'oggetto puntato dai vari laser che lo stesso sensore emette, rilevo quanto il cestino sia pieno, e se viene visto come pieno, il microcontrollore manda un segnale tramite wi-fi all’app, informando il netturbino tramite notifica e dandogli il compito di svuotare quel particolare cestino.",
         "Tutto ció risulta molto scalabile, quindi permettendo di aggiungere molti dettagli in futuro per personalizzare il tutto, ad esempio la collaborazione con cittadini volontari che possono svuotare i cestini guadagnando qualcosa sulla tassa dei rifiuti.",
         "È un’idea credo piuttosto facile da realizzare e poco dispendiosa soprattutto (per una città come La Spezia rientriamo nell’ordine di piú o meno una migliaia di euro), ed è soprattutto un buon investimento per la pulizia e la salute della città."
     ];
@@ -89,6 +93,11 @@ async function samsLetsApp()
 
     image1.src = "images/ESP32.png";
     image2.src = "images/Cestino.jpg";
+
+    image1.onclick = function() { window.location.href = 'https://www.espressif.com/en/products/socs/esp32-s2/'; }
+
+    image2.style.width = "40%";
+    image2.style.height = "40%";
 
     imagesDiv.appendChild(image1);
     imagesDiv.appendChild(image2);

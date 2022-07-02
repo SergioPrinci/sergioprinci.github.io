@@ -52,7 +52,7 @@ async function mainPage()
                 "Benvenuti in PCTO Versione 2.3b",
                 "Tramite questo sito vi verr\xE1 descritta la mia esperienza di PCTO in questi tre anni.",
                 "Prego, sciegliere l'anno di cui si vuole parlare."
-            ];
+    ];
 
     for (var i = 0; i < stringList.length; i++)
     {
@@ -103,7 +103,7 @@ async function loadThirdYear()
                 "Ero molto desideroso di imparare cose nuove, e aspettavo da tempo l'opportunit\xE1 di affrontare una situazione di lavoro.",
                 "Purtroppo, ci\xF3 non \xE9 stato possibile, a causa di ci\xF3 che ha messo in crisi l'intero mondo nel giro di pochi mesi:",
                 "il coronavirus."
-            ];
+    ];
 
     for (var i = 0; i < stringList.length; i++)
     {
@@ -135,10 +135,11 @@ async function loadFourthYear() {
 
     stringList = [
                 " Carico pagina...",
-                "Siamo al quarto anno di studio, ed ero particolarmente deluso da ció che ero riuscito a fare l'anno scorso.",
-                "Inoltre il periodo di lockdown mi aveva scosso emotivamente e mentalmente, e il mio desiderio di stare in casa si tramutó in un bisogno irrefrenabile di uscire.",
-                "Questo anno peró fu di svolta nella mia carriera, e tutt'oggi penso che le esperienze che ho fatto in questo anno scolastico, abbiano cambiato la mia forma mentis definitivamente."
-            ];
+                "Al quarto anno di studio ero particolarmente deluso dal poco che ero riuscito a fare nell'anno precedente, per quanto non fosse colpa mia.",
+                "Il periodo di lockdown mi aveva scosso emotivamente e mentalmente, e il mio desiderio di stare in casa si tramutó in un bisogno irrefrenabile di uscire.",
+                "Tutta questa voglia di fare si tramutó in un accumulo di energia che mi permise di cogliere tutte le opportunitá e lavorare al massimo tutto l'anno.",
+                "Considero questo anno determinante per me, soprattutto per come le esperienze che ho vissuto abbiano cambiato la mia forma mentis."
+    ];
 
     for (var i = 0; i < stringList.length; i++)
     {
@@ -170,11 +171,11 @@ async function loadFifthYear()
 
     stringList = [
                 " Carico pagina...",
-                "Quinto ed ultimo anno di scuola, ho compreso per bene chi sono e cosa mi piace fare.",
+                "Quinto ed ultimo anno di scuola, grazie a ció che é successo negli anni scorsi ho compreso molto di me stesso e cosa mi piace fare.",
                 "Ció é stato molto utile, perché quest'anno, potendo sfruttare l'orientamento in uscita, ho avuto la possibilitá di scegliere il mio futuro.",
                 "Inoltre, avevo giá raggiunto il monte ore grazie alle molte esperienze che ho avuto negli anni precedenti.",
                 "Tutto ció ha portato a concentrarmi di piú sull'esame e su ció che sarebbe venuto dopo."
-            ];
+    ];
 
     for (var i = 0; i < stringList.length; i++)
     {

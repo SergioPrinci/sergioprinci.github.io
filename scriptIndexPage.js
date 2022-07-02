@@ -1,6 +1,10 @@
 var terminal = document.getElementById("terminalSection");
+var imagesDiv = document.getElementById("images");
+var skipButton = document.getElementById("skipButton");
+var skip = false;
 
-var stringList;
+skipButton.addEventListener("click", function () { skip = true; });
+window.addEventListener("load", mainPage);
 
 async function mainPage()
 {
@@ -34,13 +38,13 @@ async function mainPage()
         for (var j = 0; j < string.length; j++)
         {
             terminal.innerHTML += string[j];
-            await sleep(5);
+            if (!skip) await sleep(5);
         }
         terminal.innerHTML += "<br>";
-        await sleep(100);
+        if (!skip) await sleep(100);
     }
 
-    await sleep(1000);
+    if (!skip) await sleep(1000);
 
     //normal screen
     terminal.innerHTML = "";
@@ -58,10 +62,10 @@ async function mainPage()
         for (var j = 0; j < string.length; j++)
         {
             terminal.innerHTML += string[j];
-            await sleep(30);
+            if (!skip) await sleep(30);
         }
         terminal.innerHTML += "<br>";
-        await sleep(700);
+        if (!skip) await sleep(700);
     }
     
     var buttonDiv = document.getElementById("buttons");
@@ -109,10 +113,10 @@ async function loadThirdYear()
         for (var j = 0; j < string.length; j++)
         {
             terminal.innerHTML += string[j];
-            await sleep(30);
+            if (!skip) await sleep(30);
         }
         terminal.innerHTML += "<br>";
-        await sleep(700);
+        if (!skip) await sleep(700);
     }
 
     await sleep(5000);
@@ -145,10 +149,10 @@ async function loadFourthYear() {
         for (var j = 0; j < string.length; j++)
         {
             terminal.innerHTML += string[j];
-            await sleep(30);
+            if (!skip) await sleep(30);
         }
         terminal.innerHTML += "<br>";
-        await sleep(700);
+        if (!skip) await sleep(700);
     }
 
     await sleep(5000);
@@ -181,15 +185,13 @@ async function loadFifthYear()
         for (var j = 0; j < string.length; j++)
         {
             terminal.innerHTML += string[j];
-            await sleep(30);
+            if (!skip) await sleep(30);
         }
         terminal.innerHTML += "<br>";
-        await sleep(700);
+        if (!skip) await sleep(700);
     }
 
     await sleep(5000);
 
     window.location.href = "fifthYear.html";
 }
-
-mainPage();

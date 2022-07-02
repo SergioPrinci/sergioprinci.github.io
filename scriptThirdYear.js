@@ -4,6 +4,7 @@ var skipButton = document.getElementById("skipButton");
 var skip = false;
 
 skipButton.addEventListener("click", function () { skip = true; });
+window.addEventListener("load", thirdYearPage);
 
 async function thirdYearPage()
 {
@@ -28,10 +29,10 @@ async function thirdYearPage()
         for (var j = 0; j < string.length; j++)
         {
             terminal.innerHTML += string[j];
-            if (skip == false) await sleep(30);
+            if (!skip) await sleep(30);
         }
         terminal.innerHTML += "<br>";
-        if (skip == false) await sleep(700);
+        if (!skip) await sleep(700);
     }
 
     //images
@@ -84,10 +85,10 @@ async function samsLetsApp()
         for (var j = 0; j < string.length; j++)
         {
             terminal.innerHTML += string[j];
-            if (skip == false) await sleep(30);
+            if (!skip) await sleep(30);
         }
         terminal.innerHTML += "<br>";
-        if (skip == false) await sleep(700);
+        if (!skip) await sleep(700);
     }
 
     imagesDiv.innerHTML = "";
@@ -106,5 +107,3 @@ async function samsLetsApp()
     imagesDiv.appendChild(image1);
     imagesDiv.appendChild(image2);
 }
-
-thirdYearPage();

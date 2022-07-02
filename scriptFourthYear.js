@@ -4,6 +4,7 @@ var skipButton = document.getElementById("skipButton");
 var skip = false;
 
 skipButton.addEventListener("click", function () { skip = true; });
+window.addEventListener("load", fourthYearPage);
 
 async function fourthYearPage()
 {
@@ -29,10 +30,10 @@ async function fourthYearPage()
         for (var j = 0; j < string.length; j++)
         {
             terminal.innerHTML += string[j];
-            if (skip == false) await sleep(30);
+            if (!skip) await sleep(30);
         }
         terminal.innerHTML += "<br>";
-        if (skip == false) await sleep(700);
+        if (!skip) await sleep(700);
     }
 
     //images
@@ -58,6 +59,7 @@ async function fourthYearPage()
     imagesDiv.appendChild(image2);
     imagesDiv.appendChild(image3);
 
+    //button
     var buttonDiv = document.getElementById("buttons");
 
     var button1 = document.createElement("button");
@@ -102,10 +104,10 @@ async function ciscoPage()
         for (var j = 0; j < string.length; j++)
         {
             terminal.innerHTML += string[j];
-            if (skip == false) await sleep(30);
+            if (!skip) await sleep(30);
         }
         terminal.innerHTML += "<br>";
-        if (skip == false) await sleep(700);
+        if (!skip) await sleep(700);
     }
 }
 
@@ -129,10 +131,10 @@ async function cyberChallengePage()
         for (var j = 0; j < string.length; j++)
         {
             terminal.innerHTML += string[j];
-            if (skip == false) await sleep(30);
+            if (!skip) await sleep(30);
         }
         terminal.innerHTML += "<br>";
-        if (skip == false) await sleep(700);
+        if (!skip) await sleep(700);
     }
 
     var link = document.createElement("a");
@@ -164,11 +166,9 @@ async function internProjPage()
         for (var j = 0; j < string.length; j++)
         {
             terminal.innerHTML += string[j];
-            if (skip == false) await sleep(30);
+            if (!skip) await sleep(30);
         }
         terminal.innerHTML += "<br>";
-        if (skip == false) await sleep(700);
+        if (!skip) await sleep(700);
     }
 }
-
-fourthYearPage();

@@ -16,7 +16,7 @@ async function thirdYearPage()
     stringList = [
         " All'inizio del terzo anno, abbiamo svolto dei corsi riguardanti la sicurezza sul posto di lavoro.",
         "Questo corso mi permise di imparare come gestire i pericoli sul luogo di lavoro, quindi come svolgere il proprio lavoro in sicurezza, evitando incidenti.",
-        "Il primo corso vero e proprio che ho svolto fu 'Samsung LetsApp', un corso con l'obiettivo di formare studenti che potessero sviluppare un idea di applicativo, puntato a risolvere problemi cittadini, come nettezza urbana ecc.",
+        "Il primo corso a carattere informatico che ho svolto é stato 'Samsung LetsApp': un corso che aveva l'obiettivo di formare studenti che potessero sviluppare un idea di applicativo, puntato a risolvere problemi in cui ci imbattiamo giornalmente.",
         "Questo corso mi ha permesso di sviluppare la mia creativit\xE1 in modi che non avrei immaginato, e che mi ha permesso di compiere il primo passo nel farmi un idea sul mio futuro.",
         "Un'altra esperienza importante che ho fatto \xE9 stata quella di orientamento con le terze medie, esperienza nella quale sono andato nella mia vecchia scuola:",
         "per via di situazioni un po' difficili che si sono sviluppate con dei genitori, ho imparato ad adattarmi alle situazioni pi\xFA complicate e a rispondere a 'domande difficili'.",

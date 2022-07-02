@@ -42,7 +42,7 @@ async function mainPage()
         await sleep(100);
     }
 
-    await sleep(1500);
+    await sleep(1000);
 
     //normal screen
     terminal.innerHTML = "";

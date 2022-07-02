@@ -1,51 +1,22 @@
-@keyframes boot
+@keyframes opacity
 {
-    from
-    {
-        height: 0%;
-        opacity: 0%;
+    0% {
+        opacity: 0;
     }
-
-    to
-    {
-        height: 100%;
-        opacity: 100%;
+    100% {
+        opacity: 1;
     }
 }
-
-/* https://codemyui.com/fallout-pip-boy-screen-in-css-and-html/ */
-@keyframes wave 
-{
-    0% 
-    {
-      box-shadow:0 -10vh 20vh #0c0;
-      top:-100vh;
-    }
-    48%, 52% 
-    {
-      box-shadow:0 -10vh 20vh #090;
-    }
-    50% 
-    {
-      box-shadow:0 -10vh 20vh #060;
-    }
-    100% 
-    {
-      box-shadow:0 -10vh 20vh #0c0;
-      top:200vh;
-    }
-}
-
-/* https://stackoverflow.com/questions/61431316/how-to-get-scanlines-over-background-image-in-css */
 
 body
 {
+    /* https://stackoverflow.com/questions/61431316/how-to-get-scanlines-over-background-image-in-css */
     background: radial-gradient(black 1px, green 5px) 0   0   /3px 3px;
     background-color: black;
     font-size: 2vh;
     font-family: "Consolas", "Liberation Mono";
     color: green;
-    animation: boot 2s ease-in normal;
+    animation: opacity 2s ease-in normal;
 }
 
 div
@@ -59,13 +30,18 @@ div
 
 button
 {
-    animation: boot 1s ease-in normal;
+    animation: opacity 1s ease-in normal;
     background-color: black;
     color: green;
     font-size: 2vh;
     font-family: "Consolas";
     border: solid 1px green;
     margin: 10px;
+}
+
+img
+{
+    animation: opacity 1s ease-in normal;
 }
 
 button > a
@@ -85,6 +61,17 @@ button:hover
 #screen
 {
     border: solid 5px green;
+}
+
+#images
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    float: right;
+    height: 67%;
+    width: auto;
 }
 
 #buttons

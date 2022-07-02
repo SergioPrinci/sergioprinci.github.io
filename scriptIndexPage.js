@@ -62,29 +62,11 @@ async function mainPage()
         for (var j = 0; j < string.length; j++)
         {
             terminal.innerHTML += string[j];
-            if (!skip) await sleep(30);
+            if (!skip) await sleep(50);
         }
         terminal.innerHTML += "<br>";
         if (!skip) await sleep(700);
     }
-    
-    var buttonDiv = document.getElementById("buttons");
-
-    var button1 = document.createElement("button");
-    var button2 = document.createElement("button");
-    var button3 = document.createElement("button");
-
-    button1.innerHTML = "Terzo anno";
-    button2.innerHTML = "Quarto anno";
-    button3.innerHTML = "Quinto anno";
-
-    button1.onclick = loadThirdYear;
-    button2.onclick = loadFourthYear;
-    button3.onclick = loadFifthYear;
-    
-    buttonDiv.appendChild(button1);
-    buttonDiv.appendChild(button2);
-    buttonDiv.appendChild(button3);
 }
 
 async function loadThirdYear()
@@ -113,13 +95,13 @@ async function loadThirdYear()
         for (var j = 0; j < string.length; j++)
         {
             terminal.innerHTML += string[j];
-            if (!skip) await sleep(30);
+            if (!skip) await sleep(50);
         }
         terminal.innerHTML += "<br>";
         if (!skip) await sleep(700);
     }
 
-    await sleep(5000);
+    await sleep(2000);
 
     window.location.href = "thirdYear.html";
 }
@@ -149,13 +131,13 @@ async function loadFourthYear() {
         for (var j = 0; j < string.length; j++)
         {
             terminal.innerHTML += string[j];
-            if (!skip) await sleep(30);
+            if (!skip) await sleep(50);
         }
         terminal.innerHTML += "<br>";
         if (!skip) await sleep(700);
     }
 
-    await sleep(5000);
+    await sleep(2000);
 
     window.location.href = "fourthYear.html";
 }
@@ -185,13 +167,13 @@ async function loadFifthYear()
         for (var j = 0; j < string.length; j++)
         {
             terminal.innerHTML += string[j];
-            if (!skip) await sleep(30);
+            if (!skip) await sleep(50);
         }
         terminal.innerHTML += "<br>";
         if (!skip) await sleep(700);
     }
 
-    await sleep(5000);
+    await sleep(2000);
 
     window.location.href = "fifthYear.html";
 }

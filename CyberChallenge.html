@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>CyberChallenge</title>
+        <style>
+            body
+            {
+                background-color: black;
+                color: white;
+                font-family: "Consolas";
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> CyberChallenge </h1>
+        <h2> Modalitá di svolgimento </h2>
+        <p>
+            Dopo avere svolto i test di ammissione al corso CyberChallenge da parte dell'Università di Pisa in data 30/01/2021 e il test di programmazione in data 02/02/2021, ho ricevuto la notifica di ammissione al corso e alla squadra dell’anno 2021, in data 11/02/2021 con riserva, dato che inizialmente non ero stato ammesso non essendo rientrato nelle posizioni in graduatoria, ma sono stato tenuto come riserva essendo subito sotto.
+            Il corso è stato svolto in modalità online tramite la piattaforma Microsoft Teams dal 24/02/2021 con appuntamento ogni Mercoledì e Venerdì, rispettivamente per una video-lezione con vari esperti degli argomenti trattati e una esercitazione di gruppo tramite il sito e il portale di allenamento ufficiale.
+        </p>
+        <h2> Nozioni principali su protezioni e exploit </h2>
+        <p>
+            Le protezioni che mette in atto un compilatore per la protezione della memoria in uso da parte di un eseguibile sono le seguenti:
+            <ul>
+                <li> <b>ASLR</b> ovvero Address Space Layout Randomization, l’utilizzo di indirizzi di memoria random ad ogni avvio del programma per il programma stesso e per le librerie se linkate in modo dinamico. </li>  
+                <li> <b>Canary</b>, ovvero un dato particolare chiamato che il processo è in grado di vedere e rilevare se sovrascritto (questo in caso di stack overflow) </li>
+                <li> <b>NX Stack</b>, ovvero rendere il contenuto delle stack non eseguibile, per proteggere l’esecuzione da eventuali shellcode </li>
+            </ul>
+        </p>
+        <p>
+            Abbiamo studiato inoltre come aggirare queste protezioni tramite dei metodi, quindi:
+            <ul>
+                <li> <b>Stack overflow</b>: si riempie il buffer di dati fittizi, chiamati “padding”, fino a superare i limiti e porre dentro lo stack un qualsiasi indirizzo, che puó chiamare una certa funzione o uno shellcode inserito tramite input o giá presente nel programma </li>
+                <li> <b>Shellcode</b>: lo shellcode non è altro che uno script scritto in assembly e poi codificato in byte per fare eseguire alla macchina una qualsiasi funzione, dall’aprire un'istanza di bash al creare un reverse_TCP (avviare una connessione fra la macchina in remoto e la propria per usare la linea di comando) </li>
+                <li> <b>RET2LIBC/RET2SYSCALL</b>: dirottare il flusso di esecuzione tramite stack overflow su una funzione presente nella LIBC o tramite una syscall. </li>
+                <li> <b>ROP</b>: Return oriented programming, trattasi di assemblare vari pezzi di codice già nell’eseguibile, chiamati “gadget”, in modo da creare un flusso di esecuzione completamente nuovo. </li> 
+                <li> <b>Format string</b>: sfruttare un bug della funzione C printf per iniettare del codice e eseguirlo direttamente. </li>
+            </ul>
+            Di questi il format string è stato quello che mi ha attirato di meno, quindi non lo ho completamente approfondito, mentre il più utile e versatile è sicuramente il ROP dal mio punto di vista.
+        </p>
+        <h2> Esperienze affrontate nel corso </h2>
+        <p>
+            La cosa di cui vado più fiero di questa parte è stata sicuramente la conoscenza che ho acquisito in reparto tecnico, sul come funziona un programma, un compilatore eccetera: credo sia stata la parte più eccitante del corso.
+        </p>
+        <p>
+            In seguito, abbiamo studiato, sempre affrontando queste tematiche, il disassembling tramite il famoso programma multi-piattaforma di nome Ghidra, che fornisce un’interfaccia grafica e molti strumenti per il controllo del flusso del programma e per il controllo in debug del codice assembly, e GDB, debugger della suite GNU, con un plugin open-source chiamato Pwndbg, reperibile su GitHub.
+            Approfitto della citazione di questi programmi open-source per conferire la mia soddisfazione nell’aver usato molti programmi creati da sviluppatori che seguono questa filosofia, e inoltre di aver imparato a sfruttare a pieno il sistema operativo Linux, in modo specifico nel suo flavor Kubuntu, data l’interfaccia grafica accattivante e il supporto di applicazioni progettate per sistemi Ubuntu, una delle distro (distribuzioni Linux) più diffuse al mondo.
+        </p>
+        <p>
+            Tutto ciò è stato eseguito tramite Python, un linguaggio che conoscevo giá, ma che sono riuscito ad approfondire in una maniera piú che esaustiva, e del quale ho conosciuto molte librerie nuove e quindi scoperto come usarle, dal semplice logging, all'effettuare richieste HTTP e HTTPS, fino ad arrivare a automatismi completi di exploit, con la libreria Pwntools.
+        </p>
+        <p>
+            Dopo aver approfondito questi argomenti, abbiamo cominciato con un po’ di attacchi web, dalla cattura di pacchetti tramite Wireshark, all’uso di Nmap, fino ad arrivare agli attacchi su pagine PHP e le SQL Injection.
+            Per quanto questa parte sia stata davvero appassionante, non la ritengo comunque superiore alle attività precedentemente raccontate, ovvero quelle di hacking degli eseguibili: credo infatti che il pwning sia la branca che al momento mi appassiona di più, dato che è tutto molto più grezzo e manuale, e si deve costruire tutto l’exploit sin dall’inizio senza strumenti che aiutano troppo.
+            Abbiamo imparato a utilizzare il dump, ovvero a registrare tutti i pacchetti che si catturano, e a leggerlo e comprenderlo, per trovare elementi importanti, dalle richieste HTTP al seguire certi indizi come se ci trovassimo in una caccia al tesoro (tutti questi elementi hanno poi collaborato al successo in una gara di cui parleró in seguito).
+        </p>
+        <p>
+            Poi abbiamo approfondito l’operazione che viene eseguita dalla macchina, chiamata di “imbustamento”, quindi lo studio dei pacchetti dei vari protocolli dei livelli della pila ISO/OSI, e come manifatturarne per poi mandarli tramite Python.
+        </p>
+        <p>
+            Riguardo alla parte web, invece, sfruttando varie vulnerabilità di vari programmi, spaziando infatti da SQL Injection a JavaScript injection, usare path traversal per ottenere dati all’interno della macchina che fa da server, sfruttare l’uso improprio del confronto lasco e di quello stretto in PHP, fino a risalire la struttura ad albero del linguaggio Python tramite server web per prendere il possesso della macchina.
+        </p>
+        <p>
+            Gli argomenti che ho seguito con più fatica sono stati quelli di crittografia e alcuni concetti di networking, che però ho intenzione di riprendere sfruttando ciò che studierò durante questo anno scolastico: infatti per nostra fortuna, tutte le lezioni sono state fin da subito disponibili in file, insieme alle presentazioni e alla documentazione varia, e sono riuscito a salvare tutto nel mio hard disk.
+        </p>
+        <p>
+            Per concludere, sono riuscito anche a partecipare ad una gara, dove insieme al mio team, non abbiamo avuto dei pessimi risultati, soprattutto per essere dei rookie, quindi dei novellini in materia: certo, avevamo l’aiuto dei tutor che erano in squadra con noi, ma comunque sono felice di aver potuto aiutare con qualche script in Python e la mia mania di ottimizzazione.
+        </p>
+        <p>
+            La gara infatti, è un tipo di competizione chiamato “Capture the Flag – Attack/Defense”, dove si gareggia con macchine virtuali, connesse ad una rete comune, con servizi aperti che permettono di prendere delle flag sfruttando le vulnerabilità presenti nei programmi: lo scopo del team è quello di trovare e riparare le vulnerabilità presenti sulla propria macchina, e sfruttare quelle delle altre squadre, in modo da poter catturare più punti possibile tramite degli automatismi.
+        </p>
+        <p>
+            Tramite pura conoscenza dei linguaggi di programmazione, analisi del dump delle connessioni in entrata, e script di automazione, siamo riusciti benissimo a metterci in fila alle altre squadre senza troppi problemi, e devo dire che è stato uno dei pomeriggi più interessanti e divertenti che io abbia mai trascorso (lasceró il link della repository Github a fine documento, con tutti i programmi compresi di fix, bug e appunti).
+        </p>
+        <h2> Fine corso e opinioni </h2>
+        <p>
+            In data 03/06/2021 c'è stato l’esame finale, necessario per entrare nella squadra nazionale, ma per quanto avessi buone speranze di passare ho deciso di rinunciare poiché non mi sentivo pronto e non volevo usurpare un posto che non sentivo di meritare completamente: infatti ho avuto molti problemi durante la frequentazione del corso, e molti compagni che avevano più esperienza di me si sono sempre offerti volontari per aiutarmi, e dopo tutto è stato grazie a loro e allo spunto iniziale che mi hanno dato, se sono riuscito ad arrivare in top 3 nella competizione locale.
+        </p>
+        <p>
+            Nonostante ciò, durante questa esperienza ho migliorato di molto la mia capacitá a lavorare in team, e ho capito anche alcune cose di me stesso, riguardo alla mia sicurezza interiore e quindi autostima, e al mio arrendermi facilmente, cose che dopo il corso, il lavoro svolto e i risultati raggiunti sono cambiate in meglio.
+        </p>
+        <p>
+            Inoltre ho capito che questa potrebbe essere una passione da coltivare in modo da poterla sfruttare in futuro per lo studio e poi, come lavoro, quindi facendo ciò che viene chiamato nel settore “hacker etico”.
+        </p>
+        <p>
+            Approfondirò notevolmente in futuro tutti i vari aspetti di questa enorme disciplina che è la cybersecurity, e per quanto possano esistere istituzioni nazionali di un certo spessore, e sia un qualcosa di cui si parla spesso (attacchi hacker, cyberterroristi, ricatti fra nazioni o da parte di gruppi di hacktivisti), passa ancora troppo in sordina.
+        </p>
+        <h2> Link vari </h2>
+        <p>
+            Repository GitHub contenente uno snapshot della macchina remota con il quale abbiamo effettuato la CTF: <a href="https://github.com/SergioPrinci/BambiCTF2021">GitHub Repo</a>
+        </p>
+        <p>
+            Link a una foto di un risultato di un exploit ben riuscito: <a href="Images\\Vittoria.png">Exploit ben riuscito</a>
+        </p>
+    </body>
+</html>

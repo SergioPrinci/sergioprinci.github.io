@@ -63,6 +63,12 @@ button:hover
     border: solid 5px green;
 }
 
+#skipButton
+{
+    float: right;
+    height: 4.7vh;
+}
+
 #images
 {
     display: flex;
@@ -70,7 +76,7 @@ button:hover
     justify-content: space-around;
     align-items: center;
     float: right;
-    height: 67%;
+    height: 66.5vh;
     width: auto;
 }
 

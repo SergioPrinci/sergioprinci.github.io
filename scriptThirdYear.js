@@ -1,5 +1,9 @@
 var terminal = document.getElementById("terminalSection");
 var imagesDiv = document.getElementById("images");
+var skipButton = document.getElementById("skipButton");
+var skip = false;
+
+skipButton.addEventListener("click", function () { skip = true; });
 
 async function thirdYearPage()
 {
@@ -24,10 +28,10 @@ async function thirdYearPage()
         for (var j = 0; j < string.length; j++)
         {
             terminal.innerHTML += string[j];
-            await sleep(30);
+            if (skip == false) await sleep(30);
         }
         terminal.innerHTML += "<br>";
-        await sleep(700);
+        if (skip == false) await sleep(700);
     }
 
     //images
@@ -80,10 +84,10 @@ async function samsLetsApp()
         for (var j = 0; j < string.length; j++)
         {
             terminal.innerHTML += string[j];
-            await sleep(30);
+            if (skip == false) await sleep(30);
         }
         terminal.innerHTML += "<br>";
-        await sleep(700);
+        if (skip == false) await sleep(700);
     }
 
     imagesDiv.innerHTML = "";

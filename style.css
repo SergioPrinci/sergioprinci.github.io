@@ -1,22 +1,41 @@
 @keyframes opacity
 {
-    0% {
+    0% 
+    {
         opacity: 0;
     }
-    100% {
+    100% 
+    {
         opacity: 1;
+    }
+}
+
+@keyframes boot 
+{
+    0% 
+    {
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        left: 0.5%;
+        right: 0.5%;
+    }
+    100% 
+    {
+        top: -50%;
+        bottom: -40%;
     }
 }
 
 body
 {
     /* https://stackoverflow.com/questions/61431316/how-to-get-scanlines-over-background-image-in-css */
-    background: radial-gradient(black 1px, green 5px) 0   0   /3px 3px;
+    background: radial-gradient(black 1px, green 5px) 0 0 /3px 3px;
     background-color: black;
     font-size: 2vh;
     font-family: "Consolas", "Liberation Mono";
     color: green;
-    animation: opacity 2s ease-in normal;
+    animation: opacity 3s linear normal;
 }
 
 div
@@ -61,12 +80,13 @@ button:hover
 #screen
 {
     border: solid 5px green;
+    animation: boot 4s ease-out normal;
 }
 
 #skipButton
 {
     float: right;
-    height: 4.7vh;
+    height: 4.35vh;
 }
 
 #images
@@ -76,7 +96,7 @@ button:hover
     justify-content: space-around;
     align-items: center;
     float: right;
-    height: 66.5vh;
+    height: 65vh;
     width: auto;
 }
 

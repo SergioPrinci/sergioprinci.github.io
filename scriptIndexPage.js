@@ -4,8 +4,6 @@ var stringList;
 
 async function mainPage()
 {
-    await sleep(2000);
-
     //clearing screen
     terminal.innerHTML = "";
 

@@ -15,11 +15,11 @@ async function thirdYearPage()
 
     stringList = [
         " All'inizio del terzo anno, abbiamo svolto dei corsi riguardanti la sicurezza sul posto di lavoro.",
-        "Questo corso mi permise di imparare come gestire i pericoli sul luogo di lavoro, quindi come svolgere il proprio lavoro in sicurezza, evitando incidenti.",
-        "Il primo corso a carattere informatico che ho svolto é stato 'Samsung LetsApp': un corso che aveva l'obiettivo di formare studenti che potessero sviluppare un idea di applicativo, puntato a risolvere problemi in cui ci imbattiamo giornalmente.",
-        "Questo corso mi ha permesso di sviluppare la mia creativit\xE1 in modi che non avrei immaginato, e che mi ha permesso di compiere il primo passo nel farmi un idea sul mio futuro.",
-        "Un'altra esperienza importante che ho fatto \xE9 stata quella di orientamento con le terze medie, esperienza nella quale sono andato nella mia vecchia scuola:",
-        "per via di situazioni un po' difficili che si sono sviluppate con dei genitori, ho imparato ad adattarmi alle situazioni pi\xFA complicate e a rispondere a 'domande difficili'.",
+        "Questo corso mi permise di imparare gli accorgimenti necessari su un luogo di lavoro, per non rischiare incidenti e garantire la mia sicurezza e delle persone intorno.",
+        "Il primo corso a carattere informatico che ho svolto \xE9 stato 'Samsung LetsApp', corso che aveva l'obiettivo di formare studenti che potessero sviluppare un'idea di applicativo, puntato a risolvere problemi in cui ci imbattiamo giornalmente.",
+        "Questo corso mi ha permesso di sviluppare la mia creativit\xE1, inoltre ho cominciato a capire i miei veri obiettivi futuri.",
+        "Un'altra esperienza importante che ho fatto \xE9 stata quella di orientamento con le terze medie, effettuata nella mia vecchia scuola.",
+        "Con questa ho appreso delle importanti nozioni sullo spirito di adattamento e sulla gestione di situazioni particolari (domande difficili, recuperare attenzione ragazzi).",
         "Scegliere l'attivit\xE1 di cui si vogliono conoscere i dettagli, oppure tornare alla pagina iniziale."
     ];
 
@@ -29,7 +29,7 @@ async function thirdYearPage()
         for (var j = 0; j < string.length; j++)
         {
             terminal.innerHTML += string[j];
-            if (!skip) await sleep(30);
+            if (!skip) await sleep(charTime);
         }
         terminal.innerHTML += "<br>";
         if (!skip) await sleep(700);
@@ -72,11 +72,13 @@ async function samsLetsApp()
 
     stringList = [
         " La mia idea consiste in una app che viene installata nei telefoni di tutti i netturbini della città.",
-        "Il problema delle città pi\xFA grandi è l’enorme quantità di rifiuti e la relativa difficolt\xE1 di gestione dei cestini pieni.",
-        "Con un semplice ESP32, un microcontrollore con Wi-Fi integrato, arriviamo all’applicazione hardware.",
-        "Tramite un sensore LIDAR, che permette di acquisire la distanza dell'oggetto puntato dai vari laser che lo stesso sensore emette, rilevo quanto il cestino sia pieno, e se viene visto come pieno, il microcontrollore manda un segnale tramite wi-fi all’app, informando il netturbino tramite notifica e dandogli il compito di svuotare quel particolare cestino.",
-        "Tutto ci\xF3 risulta molto scalabile, quindi permettendo di aggiungere molti dettagli in futuro per personalizzare il tutto, ad esempio la collaborazione con cittadini volontari che possono svuotare i cestini guadagnando qualcosa sulla tassa dei rifiuti.",
-        "È un’idea credo piuttosto facile da realizzare e poco dispendiosa soprattutto (per una città come La Spezia rientriamo nell’ordine di pi\xFA o meno una migliaia di euro), ed è soprattutto un buon investimento per la pulizia e la salute della città."
+        "Il problema delle città pi\xFA grandi è l’enorme quantità di rifiuti e la relativa difficolt\xE1 di gestione dei cestini 'stradali'.",
+        "Con un ESP32, un microcontrollore con Wi-Fi e bluetooth integrato, arriviamo all’applicazione hardware:",
+        "tramite un sensore LIDAR, che permette di acquisire la distanza fra sensore e un oggetto con precisione, rilevo la quantitá di rifiuti.",
+        "Quando questa quantitá supera una certa soglia, il microcontrollore manda un segnale tramite la rete cittadina ad un server, che poi inoltrerá alle app, informando cosí il netturbino tramite notifica che includerá le coordinate del GPS del cestino.",
+        "Tramite integrazione con app di navigazione (Maps, Waze o altre), l'operatore ecologico potrá raggiungere il cestino in maniera veloce e semplice.",
+        "Tutto ci\xF3 risulta molto scalabile, permettendo di aggiungere molti dettagli in futuro per personalizzare il sistema (collaborazione con cittadini volontari che svuotando i cestini guadagnano qualcosa sulla tassa dei rifiuti).",
+        "È un’idea semplice e con costi ragionevoli (per un quartiere rientriamo nell’ordine di qualche migliaia di euro), ma che avrebbe un grande impatto sulla pulizia e sulla salute della città."
     ];
 
     for (var i = 0; i < stringList.length; i++)
@@ -85,7 +87,7 @@ async function samsLetsApp()
         for (var j = 0; j < string.length; j++)
         {
             terminal.innerHTML += string[j];
-            if (!skip) await sleep(30);
+            if (!skip) await sleep(charTime);
         }
         terminal.innerHTML += "<br>";
         if (!skip) await sleep(700);

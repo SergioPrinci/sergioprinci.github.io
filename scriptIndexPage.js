@@ -41,10 +41,10 @@ async function mainPage()
             if (!skip) await sleep(5);
         }
         terminal.innerHTML += "<br>";
-        if (!skip) await sleep(100);
+        if (!skip) await sleep(20);
     }
 
-    if (!skip) await sleep(1000);
+    if (!skip) await sleep(500);
 
     //normal screen
     terminal.innerHTML = "";
@@ -62,7 +62,7 @@ async function mainPage()
         for (var j = 0; j < string.length; j++)
         {
             terminal.innerHTML += string[j];
-            if (!skip) await sleep(50);
+            if (!skip) await sleep(charTime);
         }
         terminal.innerHTML += "<br>";
         if (!skip) await sleep(700);

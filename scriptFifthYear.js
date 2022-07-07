@@ -12,17 +12,17 @@ async function fifthYearPage()
     terminal.innerHTML = "";
 
     var stringList = [
-        "Durante il quinto anno ho quindi svolto principalmente attivit\xE1 di orientamento, come l'incontro Zucchetti o con il politecnico di Torino.",
-        "L'orientamento con le medie \xE9 stata un esperienza stimolante, perch\xE9 mi ha permesso di allenarmi sul come improvvisare un discorso.",
-        "L'orientamento con il politecnico invece mi ha permesso di capire finalmente quale fosse il percorso di studi pi\xFA adatto a me, ovvero l'ingegneria informatica.",
-        "Infatti trovo molto interessante applicare l'informatica e i suoi concetti a situazioni varie, come la realizzazione di applicazioni 'dalla H alla S', oppure l'applicazione dell'informatica nella vita reale.",
-        "Probabilmente sceglier\xF3 in futuro delle specializzazioni in sicurezza informatica e elettronica, della quale mi sono appassionato molto sempre in questo anno.",
-        "Essendo questo anche l'anno finale, vorrei aggiungere delle considerazioni finali su cosa penso dell'attivit\xE1 svolta negli anni scorsi:",
-        "Il punto dolente \xE9 senza ombra di dubbio le poche attivit\xE1 in presenza che siamo riusciti a fare causa pandemia, il che ha causato una scarsa attivit\xE1 pratica durante gli anni (riguardo il PCTO).",
-        "Il professore ha comunque cercato di riempire le lacune illustrandoci numerose volte la sua esperienza in azienda e come viene gestito il tutto.",
-        "Sono molto soddisfatto invece delle soft skill che ho imparato riguardo la gestione degli eventi e delle attivit\xE1 e l'uso dei programmi di videoconferenza come Google Meet, Microsoft Teams, Zoom ed altri.",
-        "Posso anche dire che 'grazie' a questo periodo ho potuto seguire un processo di introspezione che ha portato a conoscere meglio me stesso e i miei vantaggi e difetti.",
-        "Nonostante tutto, posso dire di essere appagato del percorso di PCTO che ho fatto in questi anni, e quindi ringrazio tutti i professori delle opportunit\xE1 che mi sono state offerte e dell'incredibile supporto che mi \xE9 stato fornito.",
+        "Durante il quinto anno ho svolto principalmente attivit\xE1 di orientamento (in ingresso e in uscita).",
+        "L'orientamento con il politecnico mi ha permesso di capire finalmente quale fosse il percorso di studi pi\xFA adatto a me, ovvero l'ingegneria informatica.",
+        "Trovo molto interessante l'applicazione dell'informatica e dei suoi concetti a situazioni concrete e di varia natura.",
+        "In futuro sceglier\xF3 molto probabilmente di specializzarmi nel campo della sicurezza informatica e dell'elettronica, materia di cui mi sono appassionato durante gli anni nell'istituto.",
+        "Essendo questo l'anno finale, vorrei aggiungere delle considerazioni finali sul mio pensiero riguardo l'attivit\xE1 PCTO nel complesso:",
+        "Il punto dolente \xE9 la limitata presenza di attivita in-loco a causa pandemia.",
+        "Il professore ha comunque cercato di riempire le lacune illustrandoci numerose volte le sue esperienze in azienda.",
+        "Sono molto soddisfatto invece delle soft skill che ho acquisito, riguardo la gestione di eventi inattesi e la programmazione di attivit\xE1, l'uso dei programmi di videoconferenza come Google Meet, Microsoft Teams, Zoom e quindi l'acquisizione di esperienza su determinati ecosistemi di lavoro.",
+        "Posso anche dire che 'grazie' al periodo difficile nel quale abbiamo tutti vissuto, ho potuto seguire un processo di introspezione che mi ha portato a conoscermi meglio, quindi a rendermi conto dei miei vantaggi e dei miei difetti.",
+        "Ho lavorato anche sui miei difetti, cercando di tramutarli in vantaggi in modo da poterli sfruttare (competitivitá).",
+        "Concludendo, sono appagato del percorso di PCTO che ho compiuto in questi anni e ringrazio tutti i professori delle opportunit\xE1 che mi sono state offerte e dell'incredibile supporto che mi \xE9 stato fornito.",
         "\xE9 anche grazie a voi se sono diventato la persona che sono oggi, e non potr\xF3 mai ringraziarvi abbastanza.",
         "Princivalle Sergio"
     ];
@@ -33,7 +33,7 @@ async function fifthYearPage()
         for (var j = 0; j < string.length; j++)
         {
             terminal.innerHTML += string[j];
-            if (!skip) await sleep(30);
+            if (!skip) await sleep(charTime);
         }
         terminal.innerHTML += "<br>";
         if (!skip) await sleep(700);

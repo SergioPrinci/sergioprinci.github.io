@@ -14,13 +14,13 @@ async function fourthYearPage()
     terminal.innerHTML = "";
 
     var stringList = [
-        "In questo quarto anno, abbiamo iniziato con dei corsi offerti da Cisco, riguardanti vari aspetti dell'informatica.",
-        "Sono stati corsi sui quali ho opinioni altalenanti, perch\xE9 per quanto siano stati utili c'era molta poca pratica all'interno.",
+        "In questo quarto anno abbiamo cominciato con corsi offerti da Cisco, riguardanti vari aspetti dell'informatica.",
+        "Sono stati corsi sui quali ho opinioni altalenanti: per quanto siano stati utili, c'era molta poca pratica all'interno.",
         "Poi si \xE9 presentata una grande occasione: il progetto CyberChallenge con l'universit\xE1 di Pisa.",
-        "Ho fatto il test di ammissione, e purtroppo non lo ho passato, ma il risultato era abbastanza buono da permettermi di farmi finire in una graduatoria.",
-        "Per fortuna, in questa graduatoria ero in buona posizione, e sono stato chiamato a entrare nel corso come 'spettatore esterno', anche se poi ho avuto il permesso di seguire il corso normalmente con i miei compagni.",
-        "Credo che questo corso sia stato in assoluto una delle migliori esperienze che io abbia mai praticato, mi ha insegnato veramente tanto e di questo sono grato ai miei compagni di studio e ai tutor che mi hanno aiutato anche in momenti di crisi.",
-        "Infine, nel corso dell'anno ho avuto occasione di prendere parte a dei progetti con il professor Scimone, che mi hanno permesso di capire cose nuove sui linguaggi di programmazione e sui vantaggi/difetti che presentano.",
+        "Ho fatto il test di ammissione, che purtroppo non ho passato, ma il risultato era abbastanza buono da poter rientrare in una graduatoria che sarebbe stata usata in caso di rinuncia da parte di qualcuno.",
+        "Fortunatamente, sono entrato nel corso come 'spettatore esterno', anche se in seguito ho avuto il permesso di seguire il corso normalmente con i miei compagni.",
+        "Credo che questo corso sia stato in assoluto una delle migliori esperienze che io abbia mai praticato, mi ha insegnato veramente tanto e di questo sono grato ai miei compagni di studio e ai tutor dell'ateneo.",
+        "Infine, nel corso dell'anno ho avuto occasione di prendere parte a dei progetti con il professor Scimone, che mi hanno permesso di apprendere nozioni importanti sui vari linguaggi di programmazione e sui vantaggi/difetti che presentano.",
         "Scegliere l'attivit\xE1 di cui si vogliono conoscere i dettagli, oppure tornare alla pagina iniziale."
     ];
 
@@ -30,7 +30,7 @@ async function fourthYearPage()
         for (var j = 0; j < string.length; j++)
         {
             terminal.innerHTML += string[j];
-            if (!skip) await sleep(30);
+            if (!skip) await sleep(charTime);
         }
         terminal.innerHTML += "<br>";
         if (!skip) await sleep(700);
@@ -89,13 +89,13 @@ async function ciscoPage()
     terminal.innerHTML = "";
 
     var stringList = [
-        "I tre progetti Cisco che abbiamo svolto sono stati in parte interessanti, in parte abbastanza noiosi:",
-        "Il primo corso, Get Connected, aveva l'obiettivo di dare un infarinatura base sul funzionamento di un computer, concetti che per\xF3 noi informatici conoscevamo gi\xE1.",
-        "Il secondo e il terzo corso invece sono stati molto interessanti: il primo era sulla cybersecurity e sul come costruire una rete sicura, quindi con concetti di networking che reputo essere stati molto interessanti.",
-        "Il terzo corso infine, era un corso dedicato all'internet of things, ovvero a quello che oggi chiameremmo 'smart':",
-        "L'IoT \xE9 quel gruppo di oggetti interconnessi che dialogando fra di loro possono fornire un servizio all'utente, cosa che vediamo molto utilizzata in domotica (ad esempio, se una stazione meteorologica vede che sta piovendo, pu\xF3 comunicare con una casa per fare chiudere le persiane elettroniche).",
-        "\xE9 stato sicuramente il pi\xFA interessante, poich\xE9 mi ha permesso di sviluppare certi aspetti del progetto personale che avevo realizzato l'anno precedente.",
-        "Questi corsi sono stati molto utili, e penso che uno dei vantaggi pi\xFA grandi sia il rilascio dei certificati firmati Cisco, che risaltano in un curriculum di uno studente senza esperienze lavorative."
+        "I tre progetti Cisco che abbiamo svolto sono stati interessanti, tranne in alcuni casi:",
+        "Il primo corso, Get Connected, aveva l'obiettivo di dare un infarinatura base sul funzionamento di un computer, con concetti talvolta troppo semplici e ripetitivi.",
+        "Il secondo corso trattava argomenti di era cybersecurity, soffermandosi sugli apparati di rete che hanno il compito di rinforzare la sicurezza interna (honeypot, firewall ecc).",
+        "Il terzo corso infine, era un corso dedicato all'Internet of Things:",
+        "L'IoT \xE9 quel gruppo di oggetti interconnessi che, dialogando fra di loro, possono fornire un servizio all'utente, (es. domotica, se una stazione meteorologica rileva pioggia, vengono chiuse le persiane elettriche).",
+        "\xE9 stato sicuramente il pi\xFA interessante, poich\xE9 mi ha permesso di sviluppare certi dettagli del progetto realizzato in occasione di LetsApp",
+        "Il vantaggio maggiore nell'aver praticato questi corsi sono indubbiamente i certificati Cisco, che risaltano in un curriculum di uno studente senza esperienze lavorative."
     ];
 
     for (var i = 0; i < stringList.length; i++)
@@ -104,7 +104,7 @@ async function ciscoPage()
         for (var j = 0; j < string.length; j++)
         {
             terminal.innerHTML += string[j];
-            if (!skip) await sleep(30);
+            if (!skip) await sleep(charTime);
         }
         terminal.innerHTML += "<br>";
         if (!skip) await sleep(700);
@@ -117,12 +117,12 @@ async function cyberChallengePage()
     terminal.innerHTML = "";
 
     var stringList = [
-        "Questo corso \xE9 stato ricco di concetti, nozioni e 'rivelazioni' vere e proprie su molti aspetti dell'informatica.",
-        "Il corso era basato principalmente sulla cybersicurezza e sull'identificare le vulnerabilit\xE1 di un programma.",
-        "Abbiamo quindi esaminato i programmi a partire dal codice assembly degli stessi, per poi passare alle protezioni in compilazione e arrivare fino ai vari tipi di exploit da usare in esecuzione.",
-        "Poi siamo passati alle vulnerabilit\xE1 web, che si trovano su internet e che risultano essere molto diffuse quanto pericolose.",
-        "Tutto ci\xF3 ha sicuramente avuto effetto sulla mia sensibilit\xE1 riguardo la sicurezza informatica, quindi sulla capacit\xE1 di scrivere codice sicuro.",
-        "Per informazioni pi\xFA dettagliate lascio il link ad un documento Markdown che contiene una descrizione ancora pi\xFA accurata del corso."
+        "Questo corso \xE9 stato ricco di concetti, nozioni e 'epifanie' su molti aspetti dell'informatica.",
+        "Il corso era basato principalmente sulla cybersicurezza (identificare vulnerabilit\xE1 di un programma, rilevare falle e eliminarle).",
+        "Abbiamo esaminato i programmi a partire dal codice assembly degli stessi, per poi passare alle protezioni in compilazione e arrivare fino ai vari tipi di exploit da usare in esecuzione.",
+        "Poi siamo passati alle vulnerabilit\xE1 web, che risultano essere diffuse quanto pericolose.",
+        "Tutto ci\xF3 ha sicuramente aumentato la mia sensibilit\xE1 verso la sicurezza informatica, perfezionando la capacit\xE1 di scrivere codice sicuro.",
+        "Per informazioni pi\xFA dettagliate, lascio il link ad un documento che contiene una descrizione ancora pi\xFA accurata del corso."
     ];
 
     for (var i = 0; i < stringList.length; i++)
@@ -131,7 +131,7 @@ async function cyberChallengePage()
         for (var j = 0; j < string.length; j++)
         {
             terminal.innerHTML += string[j];
-            if (!skip) await sleep(30);
+            if (!skip) await sleep(charTime);
         }
         terminal.innerHTML += "<br>";
         if (!skip) await sleep(700);
@@ -152,12 +152,12 @@ async function internProjPage()
 
     var stringList = [
         "I progetti che ho svolto all'interno della scuola sono stati due:",
-        "Un progetto sull'elaborazione di immagini da una webcam e relativa rimozione dello sfondo, con la creazione di una sorgente video virtuale da usare nei programmi di videoconferenza.",
-        "Un progetto sulla realt\xE1 aumentata, con la realizzazione di un applicativo che tramite un prisma potesse creare un ologramma.",
-        "Sul primo progetto, abbiamo avuto un notevole aumento di prestazione (oltre il 300%) fra le due revisioni, una usando un linguaggio ad alto livello (Python, 18fps), l'altra usando un linguaggio pi\xFA a basso livello (C++, 80fps grazie alle API di accelerazione hardware Nvidia CUDA).",
-        "Il secondo progetto invece non necessitava di una grande richiesta di prestazioni, quindi lo abbiamo mantenuto pi\xFA semplice sempre con l'utilizzo di Python.",
-        "Purtroppo ho perso i codici sorgente di questi due progetti, ma si sono rivelati molto interessanti, soprattutto nell'analisi e nella profilazione delle due revisioni del primo progetto.",
-        "Infine, grazie a questi progetti ho capito che la mia area di lavoro preferita \xE9 sicuramente il back-end, o comunque la realizzazione di applicativi a basso livello."
+        "Un progetto sulla 'computer vision': rimozione dello sfondo in un flusso video webcam, creazione di una sorgente video virtuale da poter usare nei programmi di videoconferenza.",
+        "Un progetto sulla realt\xE1 aumentata: realizzazione di un applicativo, che mediante l'uso di un prisma in plastica, potesse creare un 'ologramma'.",
+        "Sul primo progetto, abbiamo avuto un notevole aumento di prestazione (oltre il 300%) fra le due revisioni: la prima scritta con un linguaggio ad alto livello (Python, 18fps), la seconda usando un linguaggio pi\xFA a basso livello (C++, 80fps grazie alle API di accelerazione hardware Nvidia CUDA).",
+        "Il secondo progetto invece non necessitava di una grande richiesta di prestazioni, quindi abbiamo mantenuto il codice semplice con l'utilizzo del linguaggio Python.",
+        "Purtroppo ho perso i codici sorgente di questi due progetti, che si sono rivelati molto interessanti, soprattutto nell'analisi e nella profilazione delle due revisioni del primo progetto.",
+        "Infine, grazie a questi progetti ho capito la mia area di lavoro preferita: il back-end, o comunque la realizzazione di applicativi a basso livello."
     ];
 
     for (var i = 0; i < stringList.length; i++)
@@ -166,7 +166,7 @@ async function internProjPage()
         for (var j = 0; j < string.length; j++)
         {
             terminal.innerHTML += string[j];
-            if (!skip) await sleep(30);
+            if (!skip) await sleep(charTime);
         }
         terminal.innerHTML += "<br>";
         if (!skip) await sleep(700);
